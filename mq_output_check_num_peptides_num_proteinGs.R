@@ -16,14 +16,12 @@ msms <- read.delim("msms.txt")
 dim(ptg)[1]
 table(ptg$Reverse)
 
-<<<<<<< HEAD
 scrampr <- filter(ptg,
                   str_detect(Protein.IDs, "SCRAMBLED"))
 
 length(scrampr$Protein.IDs)
 
-=======
->>>>>>> master
+
 # Get number of identified peptides ----
 
 dim(pept)[1]
@@ -31,9 +29,7 @@ dim(pept)[1]
 names(pept)
 table(pept$Reverse)
 table(evi$Reverse)
-<<<<<<< HEAD
 
 table(str_detect(evi$Proteins, "SCRAMBLED"))
 
-=======
->>>>>>> master
+
