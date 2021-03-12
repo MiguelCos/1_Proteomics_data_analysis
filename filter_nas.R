@@ -3,7 +3,7 @@
 ### This is a guidance script/function to filter out those proteins with X
 # max missing values in a particular group.
 
-na_filter <- function(data, max_na_per_group){
+na_filter <- function(data, max_na_per_group, logtrans){
           
           data_long <- pivot_longer(data = data,
                                     cols = matches("^S"),
@@ -12,6 +12,10 @@ na_filter <- function(data, max_na_per_group){
                     separate(col = "Group-Sample", 
                              into = c("Group", "Sample"),
                              sep = "\\-")
+          
+          if (logtrans){
+                    data_long <- mutate(data_long, Intensity = log2(Intensity))
+          }
           
           na_count <- group_by(data_long,
                                ID, Group) %>%
