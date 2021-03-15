@@ -2,6 +2,10 @@
 ## This function is used to work with the mixOmics package and extract information from 
 ## the constructed splsda model.
 
+## Interesting to add:
+# option to extract by minimal or maximal contribution
+# option to use the mean or the median intensity
+
 getbycontribution <- function(data, splsda_model){
           
           n_comps <- splsda_model$ncomp
