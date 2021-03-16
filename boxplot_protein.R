@@ -1,7 +1,6 @@
 ## do a ggplot boxplot of one protein or many proteins starting from a wide table  
 
 
-
 boxplot_protein <- function(x, protein, title = NULL){
           
           data_long <- pivot_longer(data = x,
