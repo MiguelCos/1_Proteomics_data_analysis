@@ -1,0 +1,8 @@
+### Some Rmd default yaml to use when required   
+
+---
+title: "Urine Proteomics - ProCa - Preliminary analysis on FragPipe search"
+author: "Miguel Cosenza"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
