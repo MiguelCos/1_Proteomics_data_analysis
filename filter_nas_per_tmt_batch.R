@@ -29,4 +29,6 @@ sel_proteins_missing <- function(long_matrix,
           proteins2exclude <- na_count_perbatch %>%
                     filter(na_per_batch > threshold) %>%
                     pull(Protein)
+          
+          return(proteins2exclude)
 }
