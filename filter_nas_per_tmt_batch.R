@@ -3,13 +3,16 @@
 ## Protein (protein ID), Abundance (abundance of the protein), 
 ## mixture (TMT mixture in which the protein was quantified)
 
+# the threshold argument defines how many TMT mixtures/batches you accept to have 
+# NAs for a particular protein.
+
 # Tip: you would need to transform your abundance wide matrix into long format
 # then use an annotation table to left_join with... Then you will have quant
 # info in long format for each protein and TMT batch.
 
 
 sel_proteins_missing <- function(long_matrix,
-                                 threshold) {
+                                 threshold = 1) {
           
           na_count <- group_by(long_matrix,
                                Protein, mixture) %>%
