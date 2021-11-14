@@ -2,7 +2,7 @@
 
 na_counts <- function(data, max_na_per_group){
           
-          data_long <- pivot_longer(birds_nsaf %>% rownames_to_column("PROTEIN"),
+          data_long <- pivot_longer(data,
                                     cols = where(is.numeric),
                                     values_to = "Abundance",
                                     names_to = c("Sample")) %>%
