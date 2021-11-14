@@ -20,7 +20,7 @@ na_counts <- function(data, max_na_per_group){
           
           
           included_prots <- dplyr::filter(na_count,
-                                          NA_fraction < 0.5)
+                                          NA_fraction < max_na_per_group)
           
           inclusion_list <- included_prots %>%
                     pull(PROTEIN)
