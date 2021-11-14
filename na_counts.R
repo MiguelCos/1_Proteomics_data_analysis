@@ -25,8 +25,8 @@ na_counts <- function(data, max_na_per_group){
           inclusion_list <- included_prots %>%
                     pull(PROTEIN)
           
-          list_nacounts <- list(na_count,
-                                included_prots,
+          list_nacounts <- list(na_count = na_count,
+                                included_prots = included_prots,
                                 proteins_2_include = inclusion_list)
           
           
