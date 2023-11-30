@@ -10,7 +10,7 @@ na_counts <- function(data, max_na_per_group){
                              into = c("Condition", "Run"),
                              sep = "\\_", 
                              remove = FALSE)#
-          
+          # count nas here
           na_count <- group_by(data_long,
                                PROTEIN) %>%
                     summarise(na_count = sum(is.na(Abundance)),
